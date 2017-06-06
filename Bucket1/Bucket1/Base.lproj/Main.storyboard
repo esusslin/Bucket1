@@ -247,10 +247,10 @@
             </objects>
             <point key="canvasLocation" x="3224.8000000000002" y="-863.1184407796103"/>
         </scene>
-        <!--View Controller-->
+        <!--ChatVC-->
         <scene sceneID="mqM-dq-xta">
             <objects>
-                <viewController id="YLP-xG-OgG" sceneMemberID="viewController">
+                <viewController id="YLP-xG-OgG" customClass="ChatVC" customModule="Bucket1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dVm-h6-I8E"/>
                         <viewControllerLayoutGuide type="bottom" id="kwP-cd-Nro"/>
@@ -258,16 +258,6 @@
                     <view key="view" contentMode="scaleToFill" id="Ghr-e3-ELg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CHAT!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DjF-qa-iu3">
-                                <rect key="frame" x="119" y="286" width="96" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.68543795519999995" green="0.88365254110000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.83730357685443546" green="0.28816724327805554" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="tD9-vk-khy"/>
                 </viewController>
@@ -362,6 +352,9 @@
                                                 <constraint firstAttribute="width" constant="30" id="7km-Yj-j9U"/>
                                             </constraints>
                                             <state key="normal" title="Go"/>
+                                            <connections>
+                                                <action selector="createChannel:" destination="8u1-Bd-I4G" eventType="touchUpInside" id="hQl-7e-IZ0"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -401,6 +394,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="iJq-ve-Fw0"/>
+                    <connections>
+                        <segue destination="YLP-xG-OgG" kind="show" identifier="ShowChannel" id="Gkw-GK-PLD"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1MB-XM-M4o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

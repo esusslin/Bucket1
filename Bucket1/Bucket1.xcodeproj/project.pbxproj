@@ -20,6 +20,7 @@
 		86CB49CF1EE6512500F8D591 /* CreateChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CB49CE1EE6512500F8D591 /* CreateChannelCell.swift */; };
 		86CB49D11EE6522500F8D591 /* ChannelListTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CB49D01EE6522500F8D591 /* ChannelListTableVC.swift */; };
 		86CB49D31EE6528200F8D591 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CB49D21EE6528200F8D591 /* Channel.swift */; };
+		86CB49D61EE65F8E00F8D591 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CB49D51EE65F8E00F8D591 /* ChatVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		86CB49CE1EE6512500F8D591 /* CreateChannelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateChannelCell.swift; sourceTree = "<group>"; };
 		86CB49D01EE6522500F8D591 /* ChannelListTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelListTableVC.swift; sourceTree = "<group>"; };
 		86CB49D21EE6528200F8D591 /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		86CB49D51EE65F8E00F8D591 /* ChatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		ED85A7A25E9B649371CB57DA /* Pods-Bucket1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bucket1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bucket1/Pods-Bucket1.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,6 +161,7 @@
 			children = (
 				86CB499D1EE61D6800F8D591 /* ViewController.swift */,
 				86CB49D01EE6522500F8D591 /* ChannelListTableVC.swift */,
+				86CB49D51EE65F8E00F8D591 /* ChatVC.swift */,
 				86CB49CB1EE6492600F8D591 /* LoginVC.swift */,
 			);
 			name = Controllers;
@@ -370,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86CB499E1EE61D6800F8D591 /* ViewController.swift in Sources */,
+				86CB49D61EE65F8E00F8D591 /* ChatVC.swift in Sources */,
 				86CB49D31EE6528200F8D591 /* Channel.swift in Sources */,
 				86CB499C1EE61D6800F8D591 /* AppDelegate.swift in Sources */,
 				86CB49D11EE6522500F8D591 /* ChannelListTableVC.swift in Sources */,

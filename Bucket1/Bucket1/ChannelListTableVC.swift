@@ -21,7 +21,40 @@ class ChannelListTableVC: UITableViewController {
     var newChannelTextField: UITextField? // 2
     private var channels: [Channel] = []
     
-
+    private lazy var channelRef: DatabaseReference = Database.database().reference().child("channels")
+    private var channelRefHandle: DatabaseHandle?
+    
+    
+    
+    // MARK: Firebase related methods
+    private func observeChannels() {
+        
+        // Use the observe method to listen for new
+        // channels being written to the Firebase DB
+        channelRefHandle = channelRef.observe(.childAdded, with: { (snapshot) -> Void in // 1
+            let channelData = snapshot.value as! Dictionary<String, AnyObject> // 2
+            let id = snapshot.key
+            if let name = channelData["name"] as! String!, name.characters.count > 0 { // 3
+                self.channels.append(Channel(id: id, name: name))
+                self.tableView.reloadData()
+            } else {
+                print("Error! Could not decode channel data")
+            }
+        })
+    }
+    
+    // MARK: View Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "RW RIC"
+        observeChannels()
+    }
+    
+    deinit {
+        if let refHandle = channelRefHandle {
+            channelRef.removeObserver(withHandle: refHandle)
+        }
+    }
 
     // MARK: - Table view data source
 
@@ -59,19 +92,38 @@ class ChannelListTableVC: UITableViewController {
         return cell
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        print("boners")
-        
-        channels.append(Channel(id: "1", name: "Channel1"))
-        channels.append(Channel(id: "2", name: "Channel2"))
-        channels.append(Channel(id: "3", name: "Channel3"))
-        
-        print(channels.count)
-        self.tableView.reloadData()
+    // MARK: UITableViewDelegate
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == Section.currentChannelsSection.rawValue {
+            let channel = channels[(indexPath as NSIndexPath).row]
+            self.performSegue(withIdentifier: "ShowChannel", sender: channel)
+        }
     }
-
+    
+   
+    @IBAction func createChannel(_ sender: Any) {
+        
+        if let name = newChannelTextField?.text { // 1
+            let newChannelRef = channelRef.childByAutoId() // 2
+            let channelItem = [ // 3
+                "name": name
+            ]
+            newChannelRef.setValue(channelItem) // 4
+        }
+    }
+    
+    // MARK: Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if let channel = sender as? Channel {
+            let chatVc = segue.destination as! ChatVC
+            
+            chatVc.senderDisplayName = senderDisplayName
+            chatVc.channel = channel
+            chatVc.channelRef = channelRef.child(channel.id)
+        }
+    }
     
     
     
