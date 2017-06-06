@@ -24,8 +24,6 @@ class ChannelListTableVC: UITableViewController {
     private lazy var channelRef: DatabaseReference = Database.database().reference().child("channels")
     private var channelRefHandle: DatabaseHandle?
     
-    
-    
     // MARK: Firebase related methods
     private func observeChannels() {
         
@@ -42,11 +40,13 @@ class ChannelListTableVC: UITableViewController {
             }
         })
     }
+
+    
     
     // MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "RW RIC"
+        title = "Channels"
         observeChannels()
     }
     
@@ -55,6 +55,8 @@ class ChannelListTableVC: UITableViewController {
             channelRef.removeObserver(withHandle: refHandle)
         }
     }
+    
+    
 
     // MARK: - Table view data source
 
@@ -119,7 +121,7 @@ class ChannelListTableVC: UITableViewController {
         if let channel = sender as? Channel {
             let chatVc = segue.destination as! ChatVC
             
-            chatVc.senderDisplayName = senderDisplayName
+            chatVc.senderDisplayName = username
             chatVc.channel = channel
             chatVc.channelRef = channelRef.child(channel.id)
         }

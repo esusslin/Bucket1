@@ -21,6 +21,7 @@
 		86CB49D11EE6522500F8D591 /* ChannelListTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CB49D01EE6522500F8D591 /* ChannelListTableVC.swift */; };
 		86CB49D31EE6528200F8D591 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CB49D21EE6528200F8D591 /* Channel.swift */; };
 		86CB49D61EE65F8E00F8D591 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CB49D51EE65F8E00F8D591 /* ChatVC.swift */; };
+		86CB49D91EE7344E00F8D591 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CB49D81EE7344E00F8D591 /* Globals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		86CB49D01EE6522500F8D591 /* ChannelListTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelListTableVC.swift; sourceTree = "<group>"; };
 		86CB49D21EE6528200F8D591 /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		86CB49D51EE65F8E00F8D591 /* ChatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		86CB49D81EE7344E00F8D591 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		ED85A7A25E9B649371CB57DA /* Pods-Bucket1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bucket1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bucket1/Pods-Bucket1.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,12 +128,10 @@
 			isa = PBXGroup;
 			children = (
 				86CB499B1EE61D6800F8D591 /* AppDelegate.swift */,
-				86CB49CE1EE6512500F8D591 /* CreateChannelCell.swift */,
+				86CB49D81EE7344E00F8D591 /* Globals.swift */,
 				86CB49D41EE6529200F8D591 /* Models */,
 				86CB49CD1EE6492C00F8D591 /* Controllers */,
-				86CB499F1EE61D6800F8D591 /* Main.storyboard */,
-				86CB49A21EE61D6800F8D591 /* Assets.xcassets */,
-				86CB49A41EE61D6800F8D591 /* LaunchScreen.storyboard */,
+				86CB49D71EE7342200F8D591 /* Views */,
 				86CB49A71EE61D6800F8D591 /* Info.plist */,
 				86CB49C91EE644D500F8D591 /* GoogleService-Info.plist */,
 			);
@@ -173,6 +173,17 @@
 				86CB49D21EE6528200F8D591 /* Channel.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		86CB49D71EE7342200F8D591 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				86CB49CE1EE6512500F8D591 /* CreateChannelCell.swift */,
+				86CB499F1EE61D6800F8D591 /* Main.storyboard */,
+				86CB49A21EE61D6800F8D591 /* Assets.xcassets */,
+				86CB49A41EE61D6800F8D591 /* LaunchScreen.storyboard */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		A40ECD317FF005B9A754354C /* Frameworks */ = {
@@ -376,6 +387,7 @@
 				86CB49D61EE65F8E00F8D591 /* ChatVC.swift in Sources */,
 				86CB49D31EE6528200F8D591 /* Channel.swift in Sources */,
 				86CB499C1EE61D6800F8D591 /* AppDelegate.swift in Sources */,
+				86CB49D91EE7344E00F8D591 /* Globals.swift in Sources */,
 				86CB49D11EE6522500F8D591 /* ChannelListTableVC.swift in Sources */,
 				86CB49CC1EE6492600F8D591 /* LoginVC.swift in Sources */,
 				86CB49CF1EE6512500F8D591 /* CreateChannelCell.swift in Sources */,

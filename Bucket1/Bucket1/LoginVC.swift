@@ -37,6 +37,7 @@ class LoginVC: UIViewController {
                     return
                 }
                 
+                username = self.nameField.text
                 self.performSegue(withIdentifier: "Login", sender: nil) // 4
             })
         }
@@ -55,7 +56,7 @@ class LoginVC: UIViewController {
     }
     
     
-    // MARK: Navigation
+//    // MARK: Navigation
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        super.prepare(for: segue, sender: sender)
 //        let navVc = segue.destination as! UINavigationController // 1
