@@ -7,6 +7,8 @@ target 'Bucket1' do
 
   # Pods for Bucket1
 
+  pod 'Alamofire', '~> 4.4'
+
   pod 'Firebase/Storage'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'

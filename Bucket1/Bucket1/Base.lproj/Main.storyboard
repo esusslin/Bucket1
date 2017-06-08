@@ -265,10 +265,10 @@
             </objects>
             <point key="canvasLocation" x="5394" y="831"/>
         </scene>
-        <!--View Controller-->
+        <!--UrlVC-->
         <scene sceneID="5v2-D1-y9p">
             <objects>
-                <viewController id="btl-uS-fBc" sceneMemberID="viewController">
+                <viewController id="btl-uS-fBc" customClass="urlVC" customModule="Bucket1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7xK-5b-NJo"/>
                         <viewControllerLayoutGuide type="bottom" id="x4u-ai-GYo"/>
@@ -276,15 +276,42 @@
                     <view key="view" contentMode="scaleToFill" id="e3c-9X-5SN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nAv-Hl-g0H">
+                                <rect key="frame" x="16" y="298" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3MP-aJ-1q7">
+                                <rect key="frame" x="164" y="374" width="46" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="sendURLBtn_pressed:" destination="btl-uS-fBc" eventType="touchUpInside" id="n20-9D-iQd"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.68543795519999995" green="0.88365254110000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="nAv-Hl-g0H" firstAttribute="centerX" secondItem="3MP-aJ-1q7" secondAttribute="centerX" id="Eyu-T2-Znh"/>
+                            <constraint firstItem="nAv-Hl-g0H" firstAttribute="leading" secondItem="e3c-9X-5SN" secondAttribute="leadingMargin" id="Gob-Xf-Bme"/>
+                            <constraint firstItem="3MP-aJ-1q7" firstAttribute="top" secondItem="nAv-Hl-g0H" secondAttribute="bottom" constant="46" id="bO2-lf-5jZ"/>
+                            <constraint firstItem="nAv-Hl-g0H" firstAttribute="trailing" secondItem="e3c-9X-5SN" secondAttribute="trailingMargin" id="qqd-D7-tK7"/>
+                            <constraint firstItem="x4u-ai-GYo" firstAttribute="top" secondItem="3MP-aJ-1q7" secondAttribute="bottom" constant="214" id="uef-Qw-v73"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nnx-jt-Zeh">
                         <barButtonItem key="leftBarButtonItem" title="LogOut" id="NEd-D4-M02"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="sendURLBtn" destination="3MP-aJ-1q7" id="4po-bj-5gR"/>
+                        <outlet property="urlTextField" destination="nAv-Hl-g0H" id="kFL-5j-6Ek"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yAw-Pi-cn1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3225" y="762"/>
+            <point key="canvasLocation" x="3224.8000000000002" y="761.46926536731644"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hL3-X3-eD3">
