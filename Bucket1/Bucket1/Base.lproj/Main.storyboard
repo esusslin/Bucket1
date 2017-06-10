@@ -172,10 +172,10 @@
             </objects>
             <point key="canvasLocation" x="3224.8000000000002" y="-1807.6461769115444"/>
         </scene>
-        <!--View Controller-->
+        <!--UrlVC-->
         <scene sceneID="Z8j-af-YDa">
             <objects>
-                <viewController id="ZlQ-r4-ZyR" sceneMemberID="viewController">
+                <viewController id="ZlQ-r4-ZyR" customClass="urlVC" customModule="Bucket1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JzR-LE-qEp"/>
                         <viewControllerLayoutGuide type="bottom" id="4v3-1x-4l2"/>
@@ -196,6 +196,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.5616347905787501" green="1" blue="0.58033920538280581" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="SUBMIT"/>
+                                <connections>
+                                    <action selector="sendURLBtn_pressed:" destination="ZlQ-r4-ZyR" eventType="touchUpInside" id="JON-zt-vMD"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="- or -" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iT7-6b-Gvv">
                                 <rect key="frame" x="167" y="382" width="40" height="21"/>
@@ -223,6 +226,10 @@
                         <color key="backgroundColor" red="0.63111424930000004" green="0.76948903989999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="GSh-oX-pOV"/>
+                    <connections>
+                        <outlet property="submitBtn" destination="2i2-4D-eMq" id="VuW-DJ-odg"/>
+                        <outlet property="urlTextField" destination="7h0-Ij-K8I" id="26a-Mj-m62"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7r-YZ-xeH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -277,37 +284,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nAv-Hl-g0H">
-                                <rect key="frame" x="16" y="298" width="343" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3MP-aJ-1q7">
-                                <rect key="frame" x="164" y="374" width="46" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="sendURLBtn_pressed:" destination="btl-uS-fBc" eventType="touchUpInside" id="n20-9D-iQd"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bucket (3)" translatesAutoresizingMaskIntoConstraints="NO" id="etj-cB-eG8">
+                                <rect key="frame" x="67" y="213" width="240" height="240"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.68543795519999995" green="0.88365254110000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="nAv-Hl-g0H" firstAttribute="centerX" secondItem="3MP-aJ-1q7" secondAttribute="centerX" id="Eyu-T2-Znh"/>
-                            <constraint firstItem="nAv-Hl-g0H" firstAttribute="leading" secondItem="e3c-9X-5SN" secondAttribute="leadingMargin" id="Gob-Xf-Bme"/>
-                            <constraint firstItem="3MP-aJ-1q7" firstAttribute="top" secondItem="nAv-Hl-g0H" secondAttribute="bottom" constant="46" id="bO2-lf-5jZ"/>
-                            <constraint firstItem="nAv-Hl-g0H" firstAttribute="trailing" secondItem="e3c-9X-5SN" secondAttribute="trailingMargin" id="qqd-D7-tK7"/>
-                            <constraint firstItem="x4u-ai-GYo" firstAttribute="top" secondItem="3MP-aJ-1q7" secondAttribute="bottom" constant="214" id="uef-Qw-v73"/>
+                            <constraint firstItem="etj-cB-eG8" firstAttribute="centerX" secondItem="e3c-9X-5SN" secondAttribute="centerX" id="CLq-AF-Uhp"/>
+                            <constraint firstItem="etj-cB-eG8" firstAttribute="leading" secondItem="e3c-9X-5SN" secondAttribute="leadingMargin" constant="51" id="KMm-QD-5Z7"/>
+                            <constraint firstItem="etj-cB-eG8" firstAttribute="top" secondItem="7xK-5b-NJo" secondAttribute="bottom" constant="149" id="k8T-tO-qpO"/>
+                            <constraint firstItem="etj-cB-eG8" firstAttribute="centerY" secondItem="e3c-9X-5SN" secondAttribute="centerY" id="pAY-8T-6II"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nnx-jt-Zeh">
                         <barButtonItem key="leftBarButtonItem" title="LogOut" id="NEd-D4-M02"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="sendURLBtn" destination="3MP-aJ-1q7" id="4po-bj-5gR"/>
-                        <outlet property="urlTextField" destination="nAv-Hl-g0H" id="kFL-5j-6Ek"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yAw-Pi-cn1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -420,7 +411,9 @@
                             <outlet property="delegate" destination="8u1-Bd-I4G" id="kia-SB-q4m"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="iJq-ve-Fw0"/>
+                    <navigationItem key="navigationItem" id="iJq-ve-Fw0">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="4gh-Zz-g1e"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="YLP-xG-OgG" kind="show" identifier="ShowChannel" id="Gkw-GK-PLD"/>
                     </connections>

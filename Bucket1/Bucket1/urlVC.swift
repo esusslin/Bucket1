@@ -13,9 +13,8 @@ class urlVC: UIViewController {
     
     
     @IBOutlet weak var urlTextField: UITextField!
-    @IBOutlet weak var sendURLBtn: UIButton!
-    
 
+    @IBOutlet weak var submitBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,33 +28,13 @@ class urlVC: UIViewController {
     
     
     @IBAction func sendURLBtn_pressed(_ sender: Any) {
-        blastAlamo()
-    }
-    
-    // ALAMOFIRE IS USED TO FIRE OFF THE SINGLE CALL TO GRAPHOPPER'S API
-    
-    func blastAlamo() {
         
-    
-    Alamofire.request("localhost:3000/users/proposal").responseJSON { response in
-    
-        debugPrint(response)
-    
-        print(response.request)  // original URL request
-        print(response.response) // HTTP URL response
-        print(response.data)     // server data
-        print(response.result)   // result of response serialization
-    
-        if let JSON = response.result.value {
-            print("JSON: \(JSON)")
-        }
+        print("SEARCH KICKED OFF")
+//        Search.postProposals()
+        
+        Search.posturl(url: urlTextField.text!)
+//        blastAlamo()
     }
-    }
-
-    
-    // BONER?
-    var allPathElevations = [Double]()
-    
     
     
     

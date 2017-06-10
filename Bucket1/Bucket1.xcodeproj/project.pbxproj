@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2AD44BF0B2D96A8C3936D5EB /* Pods_Bucket1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6538791F6B594402AC51F8A5 /* Pods_Bucket1.framework */; };
+		8686BB971EEB1017001D9D37 /* Proposal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8686BB961EEB1017001D9D37 /* Proposal.swift */; };
+		8686BB991EEB14AD001D9D37 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8686BB981EEB14AD001D9D37 /* Search.swift */; };
 		869FA67A1EE8CFC000649E4F /* urlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869FA6791EE8CFC000649E4F /* urlVC.swift */; };
 		86CB499C1EE61D6800F8D591 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CB499B1EE61D6800F8D591 /* AppDelegate.swift */; };
 		86CB499E1EE61D6800F8D591 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CB499D1EE61D6800F8D591 /* ViewController.swift */; };
@@ -45,6 +47,8 @@
 /* Begin PBXFileReference section */
 		38349B22317BC2A4A0C4A6D1 /* Pods-Bucket1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bucket1.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bucket1/Pods-Bucket1.release.xcconfig"; sourceTree = "<group>"; };
 		6538791F6B594402AC51F8A5 /* Pods_Bucket1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bucket1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8686BB961EEB1017001D9D37 /* Proposal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Proposal.swift; sourceTree = "<group>"; };
+		8686BB981EEB14AD001D9D37 /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		869FA6791EE8CFC000649E4F /* urlVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = urlVC.swift; sourceTree = "<group>"; };
 		86CB49981EE61D6800F8D591 /* Bucket1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bucket1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86CB499B1EE61D6800F8D591 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				86CB49D21EE6528200F8D591 /* Channel.swift */,
+				8686BB961EEB1017001D9D37 /* Proposal.swift */,
+				8686BB981EEB14AD001D9D37 /* Search.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -386,7 +392,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8686BB991EEB14AD001D9D37 /* Search.swift in Sources */,
 				86CB499E1EE61D6800F8D591 /* ViewController.swift in Sources */,
+				8686BB971EEB1017001D9D37 /* Proposal.swift in Sources */,
 				86CB49D61EE65F8E00F8D591 /* ChatVC.swift in Sources */,
 				86CB49D31EE6528200F8D591 /* Channel.swift in Sources */,
 				86CB499C1EE61D6800F8D591 /* AppDelegate.swift in Sources */,
