@@ -11,7 +11,12 @@ import SwiftRangeSlider
 
 class proposalVC: UIViewController {
     
-
+    var theItem: String = ""
+    var thePrice: Double = 0.0
+    var theMonthly_payments: Double = 0.0
+    var theMonths: Int = 0
+    
+    var theProposal: Proposal?
     
     var proposal = Proposal()
     
@@ -29,8 +34,11 @@ class proposalVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-               
+//        proposal = theProposal!
+        
+        print("proposalVC!")
         print(proposal)
+        print(theProposal)
         item.text = proposal.item
         price.text = String(proposal.price)
         
