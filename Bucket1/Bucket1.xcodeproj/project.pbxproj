@@ -13,6 +13,7 @@
 		8691C8361EF094D000647220 /* myBucketListTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8691C8351EF094CF00647220 /* myBucketListTableVC.swift */; };
 		8691C8391EF098AF00647220 /* bucketListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8691C8381EF098AF00647220 /* bucketListTableCell.swift */; };
 		8691C83B1EF0D9EA00647220 /* bucketVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8691C83A1EF0D9EA00647220 /* bucketVC.swift */; };
+		8691C83D1EF1A6C500647220 /* proposalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8691C83C1EF1A6C500647220 /* proposalVC.swift */; };
 		869FA67A1EE8CFC000649E4F /* urlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869FA6791EE8CFC000649E4F /* urlVC.swift */; };
 		86CB499C1EE61D6800F8D591 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CB499B1EE61D6800F8D591 /* AppDelegate.swift */; };
 		86CB499E1EE61D6800F8D591 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CB499D1EE61D6800F8D591 /* ViewController.swift */; };
@@ -55,6 +56,7 @@
 		8691C8351EF094CF00647220 /* myBucketListTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myBucketListTableVC.swift; sourceTree = "<group>"; };
 		8691C8381EF098AF00647220 /* bucketListTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bucketListTableCell.swift; sourceTree = "<group>"; };
 		8691C83A1EF0D9EA00647220 /* bucketVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bucketVC.swift; sourceTree = "<group>"; };
+		8691C83C1EF1A6C500647220 /* proposalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = proposalVC.swift; sourceTree = "<group>"; };
 		869FA6791EE8CFC000649E4F /* urlVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = urlVC.swift; sourceTree = "<group>"; };
 		86CB49981EE61D6800F8D591 /* Bucket1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bucket1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86CB499B1EE61D6800F8D591 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				8691C83A1EF0D9EA00647220 /* bucketVC.swift */,
 				8691C8351EF094CF00647220 /* myBucketListTableVC.swift */,
 				869FA6791EE8CFC000649E4F /* urlVC.swift */,
+				8691C83C1EF1A6C500647220 /* proposalVC.swift */,
 				86CB49D01EE6522500F8D591 /* ChannelListTableVC.swift */,
 				86CB49D51EE65F8E00F8D591 /* ChatVC.swift */,
 				86CB49CB1EE6492600F8D591 /* LoginVC.swift */,
@@ -420,6 +423,7 @@
 				86CB49D91EE7344E00F8D591 /* Globals.swift in Sources */,
 				86CB49D11EE6522500F8D591 /* ChannelListTableVC.swift in Sources */,
 				869FA67A1EE8CFC000649E4F /* urlVC.swift in Sources */,
+				8691C83D1EF1A6C500647220 /* proposalVC.swift in Sources */,
 				8691C8361EF094D000647220 /* myBucketListTableVC.swift in Sources */,
 				86CB49CC1EE6492600F8D591 /* LoginVC.swift in Sources */,
 				86CB49CF1EE6512500F8D591 /* CreateChannelCell.swift in Sources */,

@@ -44,6 +44,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftRangeSlider.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftWebSocket.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -67,12 +72,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>19ABDFBFB5DA2F6A8F3D3281F726FEC8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>463BC40828CE1FCA7C8570734449E316</key>
+		<key>59588D449063FEC5E4F287D4262DEBF7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -83,6 +83,16 @@
 			<true/>
 		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>948DCD50109ED8DC44A90B9D5674E74C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A09AFAC8AF4CAA8C139D85F4820D05AF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,7 +112,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E2DC803B17C52D1D931D6536549D8BFB</key>
+		<key>F8DE986363F8A563784F792E1264BBEE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
