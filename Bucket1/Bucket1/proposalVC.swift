@@ -30,8 +30,7 @@ class proposalVC: UIViewController {
         super.viewDidLoad()
         
                
-        var proposal = Proposal()
-        
+        print(proposal)
         item.text = proposal.item
         price.text = String(proposal.price)
         

@@ -30,7 +30,9 @@ class myBucketListTableVC: UITableViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
-        loadProposals()
+
+        
+       loadProposals()
     }
     
     func loadProposals() {
@@ -56,6 +58,10 @@ class myBucketListTableVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bucketCell", for: indexPath) as! bucketListTableCell
         
+        print("cell here!")
+        
+        print(indexPath.row)
+        
         let prop = myProposals[indexPath.row]
         
         cell.bindData(proposal: prop)
@@ -65,10 +71,28 @@ class myBucketListTableVC: UITableViewController {
         return cell
     }
     
+    
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        print("index path")
+        
+        print(indexPath)
+        
+        print(indexPath.row)
+        
+        print("the proposal!")
+        
+        
         let proposal = myProposals[indexPath.row]
         
+        print(proposal)
+        
        performSegue(withIdentifier: "proposalShow", sender: indexPath)
+    }
+    
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        print("DID DESELECT")
     }
     
     func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -77,8 +101,12 @@ class myBucketListTableVC: UITableViewController {
             let indexPath = sender as! NSIndexPath
             let proposalVC = segue.destination as! proposalVC
             
+            print("THE INDEX")
+          
             
             let theProposal = myProposals[indexPath.row]
+            
+            print(theProposal)
             
 //            let prop = Proposal(item: theProposal.item, price: theProposal.price, monthly_payments: theProposal.monthly_payments, months: theProposal.months)
 
