@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '948DCD50109ED8DC44A90B9D5674E74C'
-               BlueprintName = 'SwiftyJSON'
+               BlueprintIdentifier = 'A09AFAC8AF4CAA8C139D85F4820D05AF'
+               BlueprintName = 'SwiftRangeSlider'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SwiftyJSON.framework'>
+               BuildableName = 'SwiftRangeSlider.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

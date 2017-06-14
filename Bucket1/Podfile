@@ -10,6 +10,7 @@ target 'Bucket1' do
   
   #LOL
 
+pod 'SwiftRangeSlider', '~> 1.0'
   pod 'Alamofire'
     pod 'SwiftyJSON'
     pod 'ActionCableClient'

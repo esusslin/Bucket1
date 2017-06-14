@@ -68,24 +68,26 @@ class myBucketListTableVC: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let proposal = myProposals[indexPath.row]
         
-        print(proposal)
+       performSegue(withIdentifier: "proposalShow", sender: indexPath)
     }
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        
-//        if segue.identifier == "toolBeltToShow" {
-//            let indexPath = sender as! NSIndexPath
-//            let toolVC = segue.destinationViewController as! ToolShowTableViewController
-//            
-//            
-//            let tool = myTools[indexPath.row]
-//            
-//            toolVC.tool = tool
-//            
-//            
-//        }
-//        
-//    }
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "proposalShow" {
+            let indexPath = sender as! NSIndexPath
+            let proposalVC = segue.destination as! proposalVC
+            
+            
+            let theProposal = myProposals[indexPath.row]
+            
+//            let prop = Proposal(item: theProposal.item, price: theProposal.price, monthly_payments: theProposal.monthly_payments, months: theProposal.months)
+
+            proposalVC.proposal = theProposal
+            
+            
+        }
+        
+    }
 
     
 
