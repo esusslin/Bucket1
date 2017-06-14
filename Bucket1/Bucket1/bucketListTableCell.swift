@@ -9,6 +9,16 @@
 import UIKit
 
 class bucketListTableCell: UITableViewCell {
+    
+    
+    @IBOutlet weak var item: UILabel!
+    
+    @IBOutlet weak var monthly_payments: UILabel!
+    
+    @IBOutlet weak var duration: UILabel!
+    
+    @IBOutlet weak var price: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,5 +30,23 @@ class bucketListTableCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func bindData(proposal: Proposal) {
+        
+        print(proposal)
+
+        print("load data?")
+        
+        self.item.text = proposal.item as String
+        
+        self.price.text = String(proposal.price)
+        
+        self.duration.text = String(proposal.months) + " mos"
+        
+        self.monthly_payments.text = "$ " + String(proposal.monthly_payments)
+        
+        
+    }
+
 
 }

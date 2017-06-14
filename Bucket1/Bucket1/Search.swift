@@ -13,9 +13,10 @@ class Search {
     
     
     
+    
     static func requestProposals() {
         
-        var proposals: [Proposal] = []
+//        var proposals: [Proposal] = []
 
         
         Alamofire.request("https://calm-castle-11120.herokuapp.com/proposals", method: .get, headers: nil)
@@ -59,7 +60,7 @@ class Search {
         print(first_name)
         print("******")
         
-        var proposals: [Proposal] = []
+//        var proposals: [Proposal] = []
         
         let parameters: Parameters = [
                 "user": ["first_name": first_name]

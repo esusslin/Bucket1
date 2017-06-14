@@ -306,58 +306,63 @@
             </objects>
             <point key="canvasLocation" x="3224.8000000000002" y="761.46926536731644"/>
         </scene>
-        <!--Table View Controller-->
+        <!--BUCKET LIST-->
         <scene sceneID="Ug6-Sy-eLt">
             <objects>
-                <tableViewController id="5gs-0x-CEh" sceneMemberID="viewController">
+                <tableViewController id="5gs-0x-CEh" customClass="myBucketListTableVC" customModule="Bucket1" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="79" sectionHeaderHeight="28" sectionFooterHeight="28" id="sgb-GE-LMa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="bucketCell" rowHeight="100" id="ZJJ-EH-8XK">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="bucketCell" rowHeight="100" id="ZJJ-EH-8XK" customClass="bucketListTableCell" customModule="Bucket1" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZJJ-EH-8XK" id="oOX-ID-9ia">
-                                    <rect key="frame" x="0.0" y="0.0" width="308" height="99.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="308" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iga-vl-HWS">
-                                            <rect key="frame" x="8" y="8" width="174" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="174" id="4G8-Dv-52j"/>
-                                                <constraint firstAttribute="height" constant="21" id="5Rz-1J-rS5"/>
-                                            </constraints>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iga-vl-HWS">
+                                            <rect key="frame" x="8" y="8" width="25" height="14.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZ0-fO-brq">
+                                            <rect key="frame" x="8" y="77" width="29" height="14.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="1" green="0.13818173407208045" blue="0.13989140754206753" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ld-XC-2Rv">
+                                            <rect key="frame" x="266" y="72" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="monthly" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OrN-ow-zp5">
-                                            <rect key="frame" x="8" y="37" width="174" height="25"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="duration" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrk-mZ-pfg">
-                                            <rect key="frame" x="8" y="67" width="174" height="25"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="monthly" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OrN-ow-zp5">
+                                            <rect key="frame" x="170" y="70" width="65.5" height="21.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" red="0.1676012421994576" green="1" blue="0.26669408691629848" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="hrk-mZ-pfg" firstAttribute="centerY" secondItem="oOX-ID-9ia" secondAttribute="centerY" id="2hz-b8-138"/>
-                                        <constraint firstItem="Iga-vl-HWS" firstAttribute="trailing" secondItem="OrN-ow-zp5" secondAttribute="trailing" id="7Nm-6B-7M1"/>
-                                        <constraint firstItem="hrk-mZ-pfg" firstAttribute="leading" secondItem="OrN-ow-zp5" secondAttribute="trailing" constant="11" id="7VN-Nc-LRk"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="OrN-ow-zp5" secondAttribute="bottom" constant="10.5" id="ACB-PC-ANw"/>
-                                        <constraint firstItem="Iga-vl-HWS" firstAttribute="leading" secondItem="OrN-ow-zp5" secondAttribute="leading" id="Dkk-fS-Cbp"/>
-                                        <constraint firstItem="hrk-mZ-pfg" firstAttribute="top" secondItem="oOX-ID-9ia" secondAttribute="topMargin" constant="29" id="FrJ-0m-dn3"/>
-                                        <constraint firstItem="OrN-ow-zp5" firstAttribute="top" secondItem="Iga-vl-HWS" secondAttribute="bottom" constant="17" id="Ioe-Vj-bf1"/>
-                                        <constraint firstItem="Iga-vl-HWS" firstAttribute="leading" secondItem="oOX-ID-9ia" secondAttribute="leadingMargin" id="TbF-pZ-ckS"/>
-                                        <constraint firstItem="hrk-mZ-pfg" firstAttribute="trailing" secondItem="oOX-ID-9ia" secondAttribute="trailingMargin" id="bf7-wb-JsG"/>
-                                        <constraint firstItem="Iga-vl-HWS" firstAttribute="top" secondItem="oOX-ID-9ia" secondAttribute="topMargin" constant="10" id="sgI-bA-nqK"/>
+                                        <constraint firstItem="OrN-ow-zp5" firstAttribute="bottom" secondItem="oOX-ID-9ia" secondAttribute="bottomMargin" id="5FS-As-bky"/>
+                                        <constraint firstItem="hZ0-fO-brq" firstAttribute="leading" secondItem="oOX-ID-9ia" secondAttribute="leadingMargin" id="InB-BS-Tyc"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="hZ0-fO-brq" secondAttribute="bottom" id="Mk2-1a-3Wg"/>
+                                        <constraint firstAttribute="bottom" secondItem="5Ld-XC-2Rv" secondAttribute="bottom" constant="7" id="ufL-3k-AbK"/>
+                                        <constraint firstItem="Iga-vl-HWS" firstAttribute="top" secondItem="oOX-ID-9ia" secondAttribute="topMargin" id="xPi-5Z-2oU"/>
+                                        <constraint firstAttribute="trailing" secondItem="5Ld-XC-2Rv" secondAttribute="trailing" id="z9R-Of-xSF"/>
+                                        <constraint firstItem="OrN-ow-zp5" firstAttribute="trailing" secondItem="oOX-ID-9ia" secondAttribute="trailingMargin" id="zgk-ew-9q9"/>
+                                        <constraint firstItem="Iga-vl-HWS" firstAttribute="leading" secondItem="oOX-ID-9ia" secondAttribute="leadingMargin" id="zuZ-1h-iBS"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="item" destination="Iga-vl-HWS" id="7Pl-WJ-1K6"/>
+                                    <outlet property="monthly_payments" destination="OrN-ow-zp5" id="tjG-nR-2dZ"/>
+                                    <outlet property="price" destination="hZ0-fO-brq" id="hRo-6c-ntp"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -365,7 +370,7 @@
                             <outlet property="delegate" destination="5gs-0x-CEh" id="kN3-JB-Lip"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="9q1-du-OCZ">
+                    <navigationItem key="navigationItem" title="BUCKET LIST" id="9q1-du-OCZ">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="m0U-h7-OlF">
                             <connections>
                                 <segue destination="ZlQ-r4-ZyR" kind="show" id="sPa-tm-QiD"/>

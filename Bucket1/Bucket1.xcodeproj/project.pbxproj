@@ -117,6 +117,7 @@
 		8691C8371EF0988F00647220 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				86CB49CE1EE6512500F8D591 /* CreateChannelCell.swift */,
 				8691C8381EF098AF00647220 /* bucketListTableCell.swift */,
 			);
 			name = Cells;
@@ -204,7 +205,6 @@
 		86CB49D71EE7342200F8D591 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				86CB49CE1EE6512500F8D591 /* CreateChannelCell.swift */,
 				86CB499F1EE61D6800F8D591 /* Main.storyboard */,
 				86CB49A21EE61D6800F8D591 /* Assets.xcassets */,
 				86CB49A41EE61D6800F8D591 /* LaunchScreen.storyboard */,
