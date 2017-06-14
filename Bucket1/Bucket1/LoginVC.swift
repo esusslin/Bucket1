@@ -8,8 +8,11 @@
 
 import UIKit
 import Firebase
+import SwiftWebSocket
 
 class LoginVC: UIViewController {
+    
+    
     
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var bottomLayoutGuideConstraint: NSLayoutConstraint!
@@ -17,6 +20,9 @@ class LoginVC: UIViewController {
     // MARK: View Lifecycle
     
     override func viewWillAppear(_ animated: Bool) {
+        
+
+     
         super.viewWillAppear(animated)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShowNotification(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHideNotification(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
@@ -37,7 +43,10 @@ class LoginVC: UIViewController {
                     return
                 }
                 
+
+                
                 username = self.nameField.text
+                user_id = "1"
                 self.performSegue(withIdentifier: "Login", sender: nil) // 4
             })
         }
@@ -55,14 +64,6 @@ class LoginVC: UIViewController {
         bottomLayoutGuideConstraint.constant = 48
     }
     
-    
-//    // MARK: Navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        super.prepare(for: segue, sender: sender)
-//        let navVc = segue.destination as! UINavigationController // 1
-//        let channelVc = navVc.viewControllers.first as! ChannelListTableVC // 2
-//        
-//        channelVc.senderDisplayName = nameField?.text // 3
-//    }
+
     
 }

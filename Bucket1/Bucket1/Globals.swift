@@ -8,4 +8,13 @@
 
 import Foundation
 
+
+// CURRENT USER VARIABLES
 var username: String?
+var user_id = "1"
+
+var first_name: String?
+var last_name: String?
+var checking_acct: Double?
+var savings_acct: Double?
+var monthly: Double?

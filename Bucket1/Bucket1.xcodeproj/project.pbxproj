@@ -10,6 +10,9 @@
 		2AD44BF0B2D96A8C3936D5EB /* Pods_Bucket1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6538791F6B594402AC51F8A5 /* Pods_Bucket1.framework */; };
 		8686BB971EEB1017001D9D37 /* Proposal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8686BB961EEB1017001D9D37 /* Proposal.swift */; };
 		8686BB991EEB14AD001D9D37 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8686BB981EEB14AD001D9D37 /* Search.swift */; };
+		8691C8361EF094D000647220 /* myBucketListTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8691C8351EF094CF00647220 /* myBucketListTableVC.swift */; };
+		8691C8391EF098AF00647220 /* bucketListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8691C8381EF098AF00647220 /* bucketListTableCell.swift */; };
+		8691C83B1EF0D9EA00647220 /* bucketVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8691C83A1EF0D9EA00647220 /* bucketVC.swift */; };
 		869FA67A1EE8CFC000649E4F /* urlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869FA6791EE8CFC000649E4F /* urlVC.swift */; };
 		86CB499C1EE61D6800F8D591 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CB499B1EE61D6800F8D591 /* AppDelegate.swift */; };
 		86CB499E1EE61D6800F8D591 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CB499D1EE61D6800F8D591 /* ViewController.swift */; };
@@ -49,6 +52,9 @@
 		6538791F6B594402AC51F8A5 /* Pods_Bucket1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bucket1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8686BB961EEB1017001D9D37 /* Proposal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Proposal.swift; sourceTree = "<group>"; };
 		8686BB981EEB14AD001D9D37 /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		8691C8351EF094CF00647220 /* myBucketListTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myBucketListTableVC.swift; sourceTree = "<group>"; };
+		8691C8381EF098AF00647220 /* bucketListTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bucketListTableCell.swift; sourceTree = "<group>"; };
+		8691C83A1EF0D9EA00647220 /* bucketVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bucketVC.swift; sourceTree = "<group>"; };
 		869FA6791EE8CFC000649E4F /* urlVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = urlVC.swift; sourceTree = "<group>"; };
 		86CB49981EE61D6800F8D591 /* Bucket1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bucket1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86CB499B1EE61D6800F8D591 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +114,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8691C8371EF0988F00647220 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8691C8381EF098AF00647220 /* bucketListTableCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		86CB498F1EE61D6800F8D591 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +151,7 @@
 				86CB49D81EE7344E00F8D591 /* Globals.swift */,
 				86CB49D41EE6529200F8D591 /* Models */,
 				86CB49CD1EE6492C00F8D591 /* Controllers */,
+				8691C8371EF0988F00647220 /* Cells */,
 				86CB49D71EE7342200F8D591 /* Views */,
 				86CB49A71EE61D6800F8D591 /* Info.plist */,
 				86CB49C91EE644D500F8D591 /* GoogleService-Info.plist */,
@@ -166,6 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				86CB499D1EE61D6800F8D591 /* ViewController.swift */,
+				8691C83A1EF0D9EA00647220 /* bucketVC.swift */,
+				8691C8351EF094CF00647220 /* myBucketListTableVC.swift */,
 				869FA6791EE8CFC000649E4F /* urlVC.swift */,
 				86CB49D01EE6522500F8D591 /* ChannelListTableVC.swift */,
 				86CB49D51EE65F8E00F8D591 /* ChatVC.swift */,
@@ -392,7 +409,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8691C8391EF098AF00647220 /* bucketListTableCell.swift in Sources */,
 				8686BB991EEB14AD001D9D37 /* Search.swift in Sources */,
+				8691C83B1EF0D9EA00647220 /* bucketVC.swift in Sources */,
 				86CB499E1EE61D6800F8D591 /* ViewController.swift in Sources */,
 				8686BB971EEB1017001D9D37 /* Proposal.swift in Sources */,
 				86CB49D61EE65F8E00F8D591 /* ChatVC.swift in Sources */,
@@ -401,6 +420,7 @@
 				86CB49D91EE7344E00F8D591 /* Globals.swift in Sources */,
 				86CB49D11EE6522500F8D591 /* ChannelListTableVC.swift in Sources */,
 				869FA67A1EE8CFC000649E4F /* urlVC.swift in Sources */,
+				8691C8361EF094D000647220 /* myBucketListTableVC.swift in Sources */,
 				86CB49CC1EE6492600F8D591 /* LoginVC.swift in Sources */,
 				86CB49CF1EE6512500F8D591 /* CreateChannelCell.swift in Sources */,
 			);
@@ -559,9 +579,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KF8E33TYLJ;
 				INFOPLIST_FILE = Bucket1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = esusslin.Bucket1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos10.3;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -573,9 +595,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KF8E33TYLJ;
 				INFOPLIST_FILE = Bucket1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = esusslin.Bucket1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos10.3;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
