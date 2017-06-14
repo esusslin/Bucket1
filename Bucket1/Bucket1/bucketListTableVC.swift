@@ -86,11 +86,16 @@ class bucketListTableVC: UIViewController, UITableViewDataSource, UITableViewDel
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "proposalShow" {
                 let indexPath = sender as! NSIndexPath
-                let proposalVC = segue.destination as! proposalVC
             
-            let theProposal = myProposals[indexPath.row]
+            if let nav = segue.destination as? UINavigationController {
+                let proposalVC = nav.topViewController as? proposalVC!
+                let theProposal = myProposals[indexPath.row]
+                proposalVC?.theProposal = theProposal
+            }
+        
             
-             proposalVC.theProposal = theProposal
+            
+            
         }
     }
 

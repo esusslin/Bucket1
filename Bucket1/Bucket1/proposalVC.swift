@@ -34,7 +34,7 @@ class proposalVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        proposal = theProposal!
+       proposal = theProposal!
         
         print("proposalVC!")
         print(proposal)
