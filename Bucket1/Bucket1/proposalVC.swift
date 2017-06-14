@@ -11,7 +11,7 @@ import SwiftRangeSlider
 
 class proposalVC: UIViewController {
     
-
+    var theProposal: Proposal?
     
     var proposal = Proposal()
     
@@ -29,9 +29,11 @@ class proposalVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-               
-        var proposal = Proposal()
+       proposal = theProposal!
         
+        print("proposalVC!")
+        print(proposal)
+        print(theProposal)
         item.text = proposal.item
         price.text = String(proposal.price)
         
@@ -59,10 +61,11 @@ class proposalVC: UIViewController {
         
         var currentValue = sender.value
         
-                proposal.monthly_payments = (proposal.price / Double(currentValue))
+        print(currentValue)
+                proposal.monthly_payments = (proposal.price * Double(currentValue))
                 monthly.text = String(proposal.monthly_payments)
         
-        
+//        
             if (currentValue < 0.11) {
                     proposal.months = 12
                 } else if (currentValue < 0.12) {
@@ -100,6 +103,8 @@ class proposalVC: UIViewController {
     @IBAction func monthlySlider_changed(_ sender: UISlider) {
         
                 var currentValue = sender.value
+        
+        print(currentValue)
         
                 proposal.monthly_payments = Double(currentValue)
         

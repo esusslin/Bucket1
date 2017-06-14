@@ -14,9 +14,11 @@
 		8691C8391EF098AF00647220 /* bucketListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8691C8381EF098AF00647220 /* bucketListTableCell.swift */; };
 		8691C83B1EF0D9EA00647220 /* bucketVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8691C83A1EF0D9EA00647220 /* bucketVC.swift */; };
 		8691C83D1EF1A6C500647220 /* proposalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8691C83C1EF1A6C500647220 /* proposalVC.swift */; };
+		8691C83F1EF1DCC900647220 /* bucketListTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8691C83E1EF1DCC900647220 /* bucketListTableVC.swift */; };
+		8691C8411EF1F3BE00647220 /* customCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8691C8401EF1F3BE00647220 /* customCell.swift */; };
+		8691C8431EF1F49500647220 /* bucketCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8691C8421EF1F49500647220 /* bucketCollectionVC.swift */; };
 		869FA67A1EE8CFC000649E4F /* urlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869FA6791EE8CFC000649E4F /* urlVC.swift */; };
 		86CB499C1EE61D6800F8D591 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CB499B1EE61D6800F8D591 /* AppDelegate.swift */; };
-		86CB499E1EE61D6800F8D591 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CB499D1EE61D6800F8D591 /* ViewController.swift */; };
 		86CB49A11EE61D6800F8D591 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86CB499F1EE61D6800F8D591 /* Main.storyboard */; };
 		86CB49A31EE61D6800F8D591 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86CB49A21EE61D6800F8D591 /* Assets.xcassets */; };
 		86CB49A61EE61D6800F8D591 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86CB49A41EE61D6800F8D591 /* LaunchScreen.storyboard */; };
@@ -57,10 +59,12 @@
 		8691C8381EF098AF00647220 /* bucketListTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bucketListTableCell.swift; sourceTree = "<group>"; };
 		8691C83A1EF0D9EA00647220 /* bucketVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bucketVC.swift; sourceTree = "<group>"; };
 		8691C83C1EF1A6C500647220 /* proposalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = proposalVC.swift; sourceTree = "<group>"; };
+		8691C83E1EF1DCC900647220 /* bucketListTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bucketListTableVC.swift; sourceTree = "<group>"; };
+		8691C8401EF1F3BE00647220 /* customCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customCell.swift; sourceTree = "<group>"; };
+		8691C8421EF1F49500647220 /* bucketCollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bucketCollectionVC.swift; sourceTree = "<group>"; };
 		869FA6791EE8CFC000649E4F /* urlVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = urlVC.swift; sourceTree = "<group>"; };
 		86CB49981EE61D6800F8D591 /* Bucket1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bucket1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86CB499B1EE61D6800F8D591 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		86CB499D1EE61D6800F8D591 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		86CB49A01EE61D6800F8D591 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		86CB49A21EE61D6800F8D591 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86CB49A51EE61D6800F8D591 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 		8691C8371EF0988F00647220 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				8691C8401EF1F3BE00647220 /* customCell.swift */,
 				86CB49CE1EE6512500F8D591 /* CreateChannelCell.swift */,
 				8691C8381EF098AF00647220 /* bucketListTableCell.swift */,
 			);
@@ -183,9 +188,9 @@
 		86CB49CD1EE6492C00F8D591 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				86CB499D1EE61D6800F8D591 /* ViewController.swift */,
 				8691C83A1EF0D9EA00647220 /* bucketVC.swift */,
-				8691C8351EF094CF00647220 /* myBucketListTableVC.swift */,
+				8691C83E1EF1DCC900647220 /* bucketListTableVC.swift */,
+				8691C8421EF1F49500647220 /* bucketCollectionVC.swift */,
 				869FA6791EE8CFC000649E4F /* urlVC.swift */,
 				8691C83C1EF1A6C500647220 /* proposalVC.swift */,
 				86CB49D01EE6522500F8D591 /* ChannelListTableVC.swift */,
@@ -198,6 +203,7 @@
 		86CB49D41EE6529200F8D591 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8691C8351EF094CF00647220 /* myBucketListTableVC.swift */,
 				86CB49D21EE6528200F8D591 /* Channel.swift */,
 				8686BB961EEB1017001D9D37 /* Proposal.swift */,
 				8686BB981EEB14AD001D9D37 /* Search.swift */,
@@ -415,16 +421,18 @@
 				8691C8391EF098AF00647220 /* bucketListTableCell.swift in Sources */,
 				8686BB991EEB14AD001D9D37 /* Search.swift in Sources */,
 				8691C83B1EF0D9EA00647220 /* bucketVC.swift in Sources */,
-				86CB499E1EE61D6800F8D591 /* ViewController.swift in Sources */,
 				8686BB971EEB1017001D9D37 /* Proposal.swift in Sources */,
 				86CB49D61EE65F8E00F8D591 /* ChatVC.swift in Sources */,
+				8691C8411EF1F3BE00647220 /* customCell.swift in Sources */,
 				86CB49D31EE6528200F8D591 /* Channel.swift in Sources */,
+				8691C8431EF1F49500647220 /* bucketCollectionVC.swift in Sources */,
 				86CB499C1EE61D6800F8D591 /* AppDelegate.swift in Sources */,
 				86CB49D91EE7344E00F8D591 /* Globals.swift in Sources */,
 				86CB49D11EE6522500F8D591 /* ChannelListTableVC.swift in Sources */,
 				869FA67A1EE8CFC000649E4F /* urlVC.swift in Sources */,
 				8691C83D1EF1A6C500647220 /* proposalVC.swift in Sources */,
 				8691C8361EF094D000647220 /* myBucketListTableVC.swift in Sources */,
+				8691C83F1EF1DCC900647220 /* bucketListTableVC.swift in Sources */,
 				86CB49CC1EE6492600F8D591 /* LoginVC.swift in Sources */,
 				86CB49CF1EE6512500F8D591 /* CreateChannelCell.swift in Sources */,
 			);
