@@ -6,8 +6,15 @@ target 'Bucket1' do
   use_frameworks!
 
   # Pods for Bucket1
+  
+  
+  #LOL
 
-  pod 'Alamofire', '~> 4.4'
+  pod 'Alamofire'
+    pod 'SwiftyJSON'
+    pod 'ActionCableClient'
+    
+    pod 'SwiftWebSocket'
 
   pod 'Firebase/Storage'
   pod 'Firebase/Auth'

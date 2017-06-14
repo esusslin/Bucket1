@@ -10,15 +10,24 @@ import UIKit
 import Firebase
 import JSQMessagesViewController
 import Photos
+import ActionCableClient
+//import Starscream
+import SwiftWebSocket
 
-var storageRef: StorageReference = Storage.storage().reference(forURL: "gs://bucket1-6f076.appspot.com")
+
+
+
+
 
 final class ChatVC: JSQMessagesViewController {
+    
+//    var socket = WebSocket(url: URL(string: "wss://salty-meadow-12931.herokuapp.com/cable")!)
     
     
             // ELEMENTS:
             var messages = [JSQMessage]()
-            
+    
+    
             var channelRef: DatabaseReference?
             var channel: Channel? {
                 didSet {
@@ -36,6 +45,13 @@ final class ChatVC: JSQMessagesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
+        
+//        actionClient.onDisconnected = {(error: Error?) in
+//            print("Disconnected!")
+//        }
+        
+        
         self.tabBarController?.tabBar.isHidden = true
         
         observeMessages()
@@ -51,6 +67,11 @@ final class ChatVC: JSQMessagesViewController {
         super.viewDidAppear(animated)
         observeTyping()
     }
+    
+    
+    
+        
+    
     
     
     // CREATES A NEW MESSAGE
