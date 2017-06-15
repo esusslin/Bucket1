@@ -43,7 +43,7 @@ class bucketListTableCell: UITableViewCell {
         
         self.duration.text = String(proposal.months) + " mos"
         
-        self.monthly_payments.text = "$ " + String(proposal.monthly_payments)
+        self.monthly_payments.text = "$ " + String(proposal.monthly)
         
         
     }

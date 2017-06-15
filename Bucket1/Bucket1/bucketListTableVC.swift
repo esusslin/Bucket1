@@ -10,13 +10,12 @@ import UIKit
 
 class bucketListTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var myProposals: [Proposal]! = []
     
     
     
-    let prop1 = Proposal(item: "Gas-Porpane-Grill-Stainless-Steel-Outdoor-Patio-Cooking-BBQ", price: 249.98, monthly_payments: 41.50, months: 6)
-    let prop2 = Proposal(item: "Ultimate Ears BOOM 2 Meteor Wireless Mobile Bluetooth Speaker-Waterproof", price: 179.99, monthly_payments: 44.75, months: 4)
-    let prop3 = Proposal(item: "Hoover® Max Extract™ 60 Pressure Pro™ Carpet Deep Cleaner", price: 159.99, monthly_payments: 19.80, months: 8)
+//    let prop1 = Proposal(item: "Gas-Porpane-Grill-Stainless-Steel-Outdoor-Patio-Cooking-BBQ", price: 249.98, monthly_payments: 41.50, months: 6)
+//    let prop2 = Proposal(item: "Ultimate Ears BOOM 2 Meteor Wireless Mobile Bluetooth Speaker-Waterproof", price: 179.99, monthly_payments: 44.75, months: 4)
+//    let prop3 = Proposal(item: "Hoover® Max Extract™ 60 Pressure Pro™ Carpet Deep Cleaner", price: 159.99, monthly_payments: 19.80, months: 8)
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -24,9 +23,7 @@ class bucketListTableVC: UIViewController, UITableViewDataSource, UITableViewDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        myProposals.append(prop1)
-        myProposals.append(prop2)
-        myProposals.append(prop3)
+
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -90,7 +87,7 @@ class bucketListTableVC: UIViewController, UITableViewDataSource, UITableViewDel
             if let nav = segue.destination as? UINavigationController {
                 let proposalVC = nav.topViewController as? proposalVC!
                 let theProposal = myProposals[indexPath.row]
-                proposalVC?.theProposal = theProposal
+//                proposalVC?.proposal = theProposal
             }
         
             

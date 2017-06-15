@@ -18,7 +18,7 @@ class urlVC: UIViewController {
 
     @IBOutlet weak var submitBtn: UIButton!
     override func viewDidLoad() {
-        super.viewDidLoad()
+    super.viewDidLoad()
 
         urlTextField.text = ""
         
@@ -51,12 +51,52 @@ class urlVC: UIViewController {
     
     func postSemantics(url: String) {
         
+//        let proposal = Proposal?
+        
         let parameters: Parameters = ["url": url, "user_id": user_id]
         
         Alamofire.request("http://localhost:3000/proposals/url", method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .validate(statusCode: 200..<300)
             .responseJSON() { response in
-                print(response)
+//                print(response)
+                
+                 if let JSON = response.result.value as? [String:Any] {
+                    print(JSON)
+                    
+                let proposal = Proposal(item: JSON["item"] as! String, price: JSON["price"] as! Double, imageString: JSON["imageString"] as! String)
+                    
+                    myProposals.append(proposal)
+                    
+//                    trunc(length: Int, trailing: String? = "...")
+                    
+//                      let truncateItemSTring = proposal.item.trunc(length: 10, )
+                    
+                    //                let alertController = UIAlertController(title: nil, message: "New Bucket Offer:", preferredStyle: .alert)
+                    let alert = UIAlertController(title: "New Proposal: \(proposal.item) ..!", message: "Pay for this item in 8 months at \(proposal.monthly)", preferredStyle: .alert)
+                    
+                    let cancelAction = UIAlertAction(title: "OK", style: .cancel) { (action) in
+                        // hide action sheet
+                    }
+                    alert.addAction(cancelAction)
+                    
+                    
+                    let height:NSLayoutConstraint = NSLayoutConstraint(item: alert.view, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: self.view.frame.height * 0.80)
+                    alert.view.addConstraint(height);
+                    self.present(alert, animated: true, completion: nil)
+                
+//                    let proposal.imageString = JSON["imageString"] as! String
+                    
+                }
+                
+              
+                
+
+                
+//                let alert = UIAlertController(title: "New Proposal", message: "Ultimate Ears BOOM 2 for $129.99", preferredStyle: .actionSheet)
+//                alert.addAction(UIAlertAction(title: "See Bucket List", style: .default) { action in
+//                    // perhaps use action.title here
+//                })
+//                self.present(alert, animated: true)
         }        // code
     }
 

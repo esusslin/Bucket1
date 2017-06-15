@@ -8,18 +8,42 @@
 
 import Foundation
 
-
 // [1]
 enum SerializationError: Error {
     case missing(String)
 }
 
-struct Proposal {
-    var item: String = ""
-    var price: Double = 0.0
-    var monthly_payments: Double = 0.0
-    var months: Int = 0
+
+var myProposals: [Proposal]! = []
+//Double(round(1000*x)/1000)
+
+internal class Proposal {
+    let item: String
+    let price: Double
+    let monthly: Double
+    let months: Int
+    
+    let imageString: String
+    
+    init(item: String, price: Double, imageString: String) {
+        self.item = item
+        self.price = price
+        self.monthly = (price / 8)
+        self.months = 8
+        self.imageString = imageString
+    }
 }
+
+
+
+//struct Proposal {
+//    var item: String = ""
+//    var price: Double = 0.0
+//    var monthly_payments: Double = 0.0
+//    var months: Int = 0
+//    
+//    var image: String = ""
+//}
 
 //class Proposal : NSObject {
 //    

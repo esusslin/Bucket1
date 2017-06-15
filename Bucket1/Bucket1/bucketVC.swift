@@ -12,7 +12,7 @@ class bucketVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var images = ["bucket_1", "bucket_2", "bucket_3", "bucket_4", "bucket_5", "bucket_6", "bucket_1", "bucket_2", "bucket_3", "bucket_4", "bucket_5", "bucket_6", "bucket_1", "bucket_2", "bucket_3", "bucket_4", "bucket_5", "bucket_6"]
+    var images = ["bucket_1", "bucket_2", "bucket_3"]
     
     var fullImageView: UIImageView!
     

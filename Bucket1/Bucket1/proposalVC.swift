@@ -11,9 +11,15 @@ import SwiftRangeSlider
 
 class proposalVC: UIViewController {
     
-    var theProposal: Proposal?
+//   var theProposal: Proposal?
+   
     
-    var proposal = Proposal()
+    
+//    var item = String()
+//    var price = Double()
+//    var monthly = Double()
+//    var
+    
     
     @IBOutlet weak var item: UILabel!
     @IBOutlet weak var price: UILabel!
@@ -29,17 +35,6 @@ class proposalVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       proposal = theProposal!
-        
-        print("proposalVC!")
-        print(proposal)
-        print(theProposal)
-        item.text = proposal.item
-        price.text = String(proposal.price)
-        
-        monthly.text = String(proposal.monthly_payments)
-        months.text = String(proposal.months)
-
         // Do any additional setup after loading the view.
     }
 
@@ -61,39 +56,39 @@ class proposalVC: UIViewController {
         
         var currentValue = sender.value
         
-        print(currentValue)
-                proposal.monthly_payments = (proposal.price * Double(currentValue))
-                monthly.text = String(proposal.monthly_payments)
-        
+//        print(currentValue)
+//                proposal.monthly = (proposal.price * Double(currentValue))
+//                monthly.text = String(proposal.monthly)
 //        
-            if (currentValue < 0.11) {
-                    proposal.months = 12
-                } else if (currentValue < 0.12) {
-                      proposal.months = 10
-                    } else if (currentValue < 0.14) {
-                    proposal.months = 9
-               } else if (currentValue < 0.15) {
-                    proposal.months = 8
-            } else if (currentValue < 0.16) {
-                proposal.months = 7
-            } else if (currentValue < 0.18) {
-                proposal.months = 6
-            } else if (currentValue < 0.18) {
-                    proposal.months = 5
-                 } else if (currentValue < 0.25) {
-                     proposal.months = 5
-                } else if (currentValue < 0.25) {
-                proposal.months = 5
-                } else if (currentValue < 0.30) {
-                proposal.months = 4
-            } else if (currentValue < 0.333) {
-                proposal.months = 3
-        
-            } else  {
-                proposal.months = 3
-                }
-        
-                months.text = String(proposal.months)
+////        
+//            if (currentValue < 0.11) {
+//                    proposal.months = 12
+//                } else if (currentValue < 0.12) {
+//                      proposal.months = 10
+//                    } else if (currentValue < 0.14) {
+//                    proposal.months = 9
+//               } else if (currentValue < 0.15) {
+//                    proposal.months = 8
+//            } else if (currentValue < 0.16) {
+//                proposal.months = 7
+//            } else if (currentValue < 0.18) {
+//                proposal.months = 6
+//            } else if (currentValue < 0.18) {
+//                    proposal.months = 5
+//                 } else if (currentValue < 0.25) {
+//                     proposal.months = 5
+//                } else if (currentValue < 0.25) {
+//                proposal.months = 5
+//                } else if (currentValue < 0.30) {
+//                proposal.months = 4
+//            } else if (currentValue < 0.333) {
+//                proposal.months = 3
+//        
+//            } else  {
+//                proposal.months = 3
+//                }
+//        
+//                months.text = String(proposal.months)
     }
         
     
@@ -106,13 +101,13 @@ class proposalVC: UIViewController {
         
         print(currentValue)
         
-                proposal.monthly_payments = Double(currentValue)
-        
-                months.text = String(proposal.monthly_payments)
-        
-                proposal.monthly_payments = (proposal.price / Double(currentValue))
-        
-                monthly.text = String(proposal.monthly_payments)
+//                proposal.monthly_payments = Double(currentValue)
+//        
+//                months.text = String(proposal.monthly_payments)
+//        
+//                proposal.monthly_payments = (proposal.price / Double(currentValue))
+//        
+//                monthly.text = String(proposal.monthly_payments)
     }
 
 

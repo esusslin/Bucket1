@@ -97,7 +97,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yez-4F-jfJ">
                                 <rect key="frame" x="115" y="145" width="160" height="200"/>
-                                <state key="normal" image="bucket (3)"/>
+                                <state key="normal" image="noun_1094263_cc"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bucket" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YwG-Ka-Eyj">
                                 <rect key="frame" x="107" y="59" width="177" height="45"/>
@@ -105,10 +105,9 @@
                                     <constraint firstAttribute="height" constant="45" id="F7h-Rw-Nwq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="40"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <size key="shadowOffset" width="0.0" height="-4"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MPw-fb-BHd">
                                 <rect key="frame" x="93" y="443" width="205" height="30"/>
@@ -133,7 +132,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.41239276870000002" green="0.46936755409999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.69998009888995782" green="0.95536821515506243" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="IcL-UI-FMj" firstAttribute="top" secondItem="MPw-fb-BHd" secondAttribute="bottom" constant="52" id="0Q1-Lw-Doq"/>
                             <constraint firstItem="Yez-4F-jfJ" firstAttribute="centerX" secondItem="MPw-fb-BHd" secondAttribute="centerX" id="7nC-wi-DLR"/>
@@ -855,6 +854,7 @@
         <image name="bucket (5)" width="32" height="32"/>
         <image name="list" width="24" height="24"/>
         <image name="mail" width="24" height="24"/>
+        <image name="noun_1094263_cc" width="700" height="700"/>
         <image name="target" width="24" height="24"/>
         <image name="target_large" width="256" height="256"/>
     </resources>
