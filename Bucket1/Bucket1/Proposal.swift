@@ -14,14 +14,14 @@ enum SerializationError: Error {
 }
 
 
-var myProposals: [Proposal]! = []
+var myProposals = [Proposal]()
 //Double(round(1000*x)/1000)
 
 internal class Proposal {
-    let item: String
-    let price: Double
-    let monthly: Double
-    let months: Int
+    var item: String
+    var price: Double
+    var monthly: Double
+    var months: Int
     
     let imageString: String
     
@@ -31,6 +31,8 @@ internal class Proposal {
         self.monthly = (price / 8)
         self.months = 8
         self.imageString = imageString
+        
+        
     }
 }
 

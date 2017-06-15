@@ -61,21 +61,30 @@ class urlVC: UIViewController {
 //                print(response)
                 
                  if let JSON = response.result.value as? [String:Any] {
-                    print(JSON)
+//                    print(JSON)
                     
-                let proposal = Proposal(item: JSON["item"] as! String, price: JSON["price"] as! Double, imageString: JSON["imageString"] as! String)
+                let proposal1 = Proposal(item: JSON["item"] as! String, price: JSON["price"] as! Double, imageString: JSON["imageString"] as! String)
+                    let proposal2 = Proposal(item: JSON["item"] as! String, price: JSON["price"] as! Double, imageString: JSON["imageString"] as! String)
+                    let proposal3 = Proposal(item: JSON["item"] as! String, price: JSON["price"] as! Double, imageString: JSON["imageString"] as! String)
                     
-                    myProposals.append(proposal)
-                    
+                    print(proposal1)
+                    myProposals.append(proposal1)
+                    myProposals.append(proposal2)
+                    myProposals.append(proposal3)
+//                    ["months": <null>, "imageString": http://sem3-idn.s3-website-us-east-1.amazonaws.com/128e67a106566ea787c0b8bdd99b6f72,0.jpg, "updated_at": <null>, "id": <null>, "item": 5-Burner Gas Grill, Stainless Steel/Black, "created_at": <null>, "monthly": <null>, "user_id": <null>, "price": 156.07]
+//                        [Bucket1.Proposal]
+//                    
 //                    trunc(length: Int, trailing: String? = "...")
                     
 //                      let truncateItemSTring = proposal.item.trunc(length: 10, )
                     
                     //                let alertController = UIAlertController(title: nil, message: "New Bucket Offer:", preferredStyle: .alert)
-                    let alert = UIAlertController(title: "New Proposal: \(proposal.item) ..!", message: "Pay for this item in 8 months at \(proposal.monthly)", preferredStyle: .alert)
+                    let alert = UIAlertController(title: "New Proposal: \(proposal2.item) ..!", message: "Pay for this item in 8 months at \(proposal2.monthly)", preferredStyle: .alert)
                     
                     let cancelAction = UIAlertAction(title: "OK", style: .cancel) { (action) in
-                        // hide action sheet
+                        
+                        print("BONER!")
+                        print(myProposals[1].item)
                     }
                     alert.addAction(cancelAction)
                     

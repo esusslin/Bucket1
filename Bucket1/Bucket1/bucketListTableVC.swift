@@ -22,19 +22,35 @@ class bucketListTableVC: UIViewController, UITableViewDataSource, UITableViewDel
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
+//        print("fuck off")
 
         
         tableView.dataSource = self
         tableView.delegate = self
 
         loadProposals()
+        fuckingChrist()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loadProposals()
+        fuckingChrist()
     }
     
     func loadProposals() {
         
-        self.tableView.reloadData()
+        print("what the damn fuck?")
+        tableView.reloadData()
+    }
+    
+    func fuckingChrist() {
+        print("fuck off")
+        if myProposals.count > 0 {
+            print(myProposals[1].item)
+            print(myProposals.count)
+        }
     }
 
     
@@ -87,7 +103,7 @@ class bucketListTableVC: UIViewController, UITableViewDataSource, UITableViewDel
             if let nav = segue.destination as? UINavigationController {
                 let proposalVC = nav.topViewController as? proposalVC!
                 let theProposal = myProposals[indexPath.row]
-//                proposalVC?.proposal = theProposal
+                proposalVC?.proposal1 = theProposal
             }
         
             
