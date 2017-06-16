@@ -34,7 +34,7 @@ class bucketVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         fullImageView.addGestureRecognizer(dismissWihtTap)
 
 
-        // Do any additional setup after loading the view.
+        
     }
 
     override func viewWillLayoutSubviews() {

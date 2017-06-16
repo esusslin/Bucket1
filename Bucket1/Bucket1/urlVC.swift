@@ -48,10 +48,18 @@ class urlVC: UIViewController {
 
     }
     
+//    let parameters: Parameters = ["bucket": ["item": "boner", "price": "boner", "monthly": "boner", "months": "boner"]
+//    ]
+//    
+//    Alamofire.request("https://localhost:3000/proposals/hello", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+//    .validate(statusCode: 200..<300)
+//    .responseJSON() { response in
+//    print(response)
+//    }
+    
     
     func postSemantics(url: String) {
-        
-//        let proposal = Proposal?
+
         
         let parameters: Parameters = ["url": url, "user_id": user_id]
         
@@ -61,30 +69,23 @@ class urlVC: UIViewController {
 //                print(response)
                 
                  if let JSON = response.result.value as? [String:Any] {
-//                    print(JSON)
+                    print(JSON)
                     
-                let proposal1 = Proposal(item: JSON["item"] as! String, price: JSON["price"] as! Double, imageString: JSON["imageString"] as! String)
-                    let proposal2 = Proposal(item: JSON["item"] as! String, price: JSON["price"] as! Double, imageString: JSON["imageString"] as! String)
-                    let proposal3 = Proposal(item: JSON["item"] as! String, price: JSON["price"] as! Double, imageString: JSON["imageString"] as! String)
+                    let proposal1 = Proposal(item: JSON["item"] as! String, price: JSON["price"] as! Double, imageString: JSON["imageString"] as! String)
+//                    let proposal2 = Proposal(item: JSON["item"] as! String, price: JSON["price"] as! Double, imageString: JSON["imageString"] as! String)
+//                    let proposal3 = Proposal(item: JSON["item"] as! String, price: JSON["price"] as! Double, imageString: JSON["imageString"] as! String)
                     
                     print(proposal1)
                     myProposals.append(proposal1)
-                    myProposals.append(proposal2)
-                    myProposals.append(proposal3)
-//                    ["months": <null>, "imageString": http://sem3-idn.s3-website-us-east-1.amazonaws.com/128e67a106566ea787c0b8bdd99b6f72,0.jpg, "updated_at": <null>, "id": <null>, "item": 5-Burner Gas Grill, Stainless Steel/Black, "created_at": <null>, "monthly": <null>, "user_id": <null>, "price": 156.07]
-//                        [Bucket1.Proposal]
-//                    
-//                    trunc(length: Int, trailing: String? = "...")
-                    
-//                      let truncateItemSTring = proposal.item.trunc(length: 10, )
-                    
-                    //                let alertController = UIAlertController(title: nil, message: "New Bucket Offer:", preferredStyle: .alert)
-                    let alert = UIAlertController(title: "New Proposal: \(proposal2.item) ..!", message: "Pay for this item in 8 months at \(proposal2.monthly)", preferredStyle: .alert)
+                
+
+
+                    let alert = UIAlertController(title: "New Proposal: \(proposal1.item) ..!", message: "Pay for this item in 8 months at \(proposal1.monthly)", preferredStyle: .alert)
                     
                     let cancelAction = UIAlertAction(title: "OK", style: .cancel) { (action) in
                         
                         print("BONER!")
-                        print(myProposals[1].item)
+                       
                     }
                     alert.addAction(cancelAction)
                     
@@ -97,16 +98,8 @@ class urlVC: UIViewController {
                     
                 }
                 
-              
-                
-
-                
-//                let alert = UIAlertController(title: "New Proposal", message: "Ultimate Ears BOOM 2 for $129.99", preferredStyle: .actionSheet)
-//                alert.addAction(UIAlertAction(title: "See Bucket List", style: .default) { action in
-//                    // perhaps use action.title here
-//                })
-//                self.present(alert, animated: true)
         }        // code
+
     }
 
     
@@ -114,10 +107,10 @@ class urlVC: UIViewController {
 
 
     
-    
-
-   
 }
+
+
+
 
 
 

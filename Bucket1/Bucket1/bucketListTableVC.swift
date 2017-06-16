@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+
 
 class bucketListTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -37,6 +39,40 @@ class bucketListTableVC: UIViewController, UITableViewDataSource, UITableViewDel
     override func viewWillAppear(_ animated: Bool) {
         loadProposals()
         fuckingChrist()
+        
+//        myProposals.removeAll()
+        
+            //        var proposals: [Proposal] = []
+            
+            
+            Alamofire.request("http://localhost:3000/users/1/proposals", method: .get, headers: nil)
+                .validate(statusCode: 200..<300)
+                .responseJSON { response in
+//                    print(response.result.value)
+                    
+                    if let JSON = response.result.value! as? [[String:Any]] {
+                        
+//                        print("COUNT")
+//                        print(JSON.count)
+                        
+                      print(JSON)
+                            
+                            
+                        for a in JSON {
+                        
+                            let prop = Proposal(item: a["item"] as! String, price: a["price"] as! Double, imageString: a["imageString"] as! String)
+                            
+
+                        myProposals.append(prop)
+                        }
+                  
+                        print(myProposals)
+                    }
+            }        // code
+
+
+        
+        
     }
     
     func loadProposals() {
@@ -48,7 +84,7 @@ class bucketListTableVC: UIViewController, UITableViewDataSource, UITableViewDel
     func fuckingChrist() {
         print("fuck off")
         if myProposals.count > 0 {
-            print(myProposals[1].item)
+           
             print(myProposals.count)
         }
     }
@@ -75,8 +111,6 @@ class bucketListTableVC: UIViewController, UITableViewDataSource, UITableViewDel
         let prop = myProposals[indexPath.row]
         
         cell.bindData(proposal: prop)
-        
-        
         
         return cell
     }
