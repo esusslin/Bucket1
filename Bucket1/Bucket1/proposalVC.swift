@@ -147,10 +147,10 @@ class proposalVC: UIViewController {
                     if let JSON = response.result.value as? [String:Any] {
                        print(JSON)
                         
-                        let bucket = Bucket(item: JSON["item"] as! String, price: JSON["price"] as! Double, imageString: JSON["imageString"] as! String)
+                        let bucket = Bucket(item: JSON["item"] as! String, price: JSON["price"] as! Double, imageString: JSON["imageString"] as! String, months: JSON["months"] as! Int, monthly: JSON["monthly"] as! Double)
                         
-             
-//                        myBuckets.append(bucket)
+                       
+                        
 
                         
                         let alert = UIAlertController(title: "New Bucket:  \(bucket.item) ..!", message: "This bucket fills in \(bucket.months)", preferredStyle: .alert)

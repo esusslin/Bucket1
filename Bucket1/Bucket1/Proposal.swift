@@ -44,11 +44,11 @@ internal class Bucket {
     
     let imageString: String
     
-    init(item: String, price: Double, imageString: String) {
+    init(item: String, price: Double, imageString: String, months: Int, monthly: Double) {
         self.item = item
         self.price = price
-        self.monthly = (price / 8)
-        self.months = 8
+        self.monthly = monthly
+        self.months = months
         self.imageString = imageString
         
         

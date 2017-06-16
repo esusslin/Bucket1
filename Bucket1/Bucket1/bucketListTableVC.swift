@@ -40,7 +40,7 @@ class bucketListTableVC: UIViewController, UITableViewDataSource, UITableViewDel
         loadProposals()
         fuckingChrist()
         
-//        myProposals.removeAll()
+        
         
             //        var proposals: [Proposal] = []
             
@@ -49,6 +49,7 @@ class bucketListTableVC: UIViewController, UITableViewDataSource, UITableViewDel
                 .validate(statusCode: 200..<300)
                 .responseJSON { response in
 //                    print(response.result.value)
+                    myProposals.removeAll()
                     
                     if let JSON = response.result.value! as? [[String:Any]] {
                         
@@ -82,9 +83,9 @@ class bucketListTableVC: UIViewController, UITableViewDataSource, UITableViewDel
     }
     
     func fuckingChrist() {
-        print("fuck off")
+       
         if myProposals.count > 0 {
-           
+            print("fuck off")
             print(myProposals.count)
         }
     }
