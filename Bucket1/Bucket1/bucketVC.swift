@@ -13,17 +13,31 @@ class bucketVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-   
+   var images = ["noun1", "noun2", "noun3"]
     
+ 
     var itemImages = [UIImage]()
-    
     var fullImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        for a in myBuckets {
+        let url = URL(string: a.imageString)!
+        let data = try? Data(contentsOf: url)
+        if let imageData = data {
+            let image = UIImage(data: data!)!
+            
+            itemImages.append(image)
+            }
+            print("Images filled")
+            print(itemImages)
+            print(itemImages.count)
+        }
+
         
-        collectionView.delegate = self
-        collectionView.dataSource = self
+     
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
         
         
         fullImageView = UIImageView()
@@ -42,58 +56,31 @@ class bucketVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     
     override func viewDidAppear(_ animated: Bool) {
         myBuckets.removeAll()
-        alamo()
-        loadImages()
-    }
-    
-    func alamo() {
-        Alamofire.request("http://localhost:3000/users/1/buckets", method: .get, headers: nil)
-            .validate(statusCode: 200..<300)
-            .responseJSON { response in
-                //                    print(response.result.value)
-                myProposals.removeAll()
-                
-                if let JSON = response.result.value! as? [[String:Any]] {
-                    
-                    //                        print("COUNT")
-                    //                        print(JSON.count)
-                    
-                    print(JSON)
-                    
-                    
-                    for a in JSON {
-                        
-                        print("A")
-                        
-                        let buck = Bucket(item: a["item"] as! String, price: a["price"] as! Double, imageString: a["imageString"] as! String, months: a["months"] as! Int, monthly: a["monthly"] as! Double)
-                        
-
-                        
-                        myBuckets.append(buck)
-                    }
-                    print("BUCKETS!")
-                    print(myBuckets)
-                }
-        }        // code
-
-    }
-    
-    func loadImages() {
         
-        for buck in myBuckets {
-            
-            
-            
-            let url = URL(string: buck.imageString)!
-            let data = try? Data(contentsOf: url)
-            if let imageData = data {
-                let image = UIImage(data: data!)!
-                
-                itemImages.append(image)
-            }
-            
-        }
+//        loadImages()
+        
+        print("ITEM IMAGES COUNT")
+       print(itemImages.count)
     }
+    
+
+    
+//    func loadImages() {
+//        
+//        for buck in myBuckets {
+//            
+//            
+//            
+//            let url = URL(string: buck.imageString)!
+//            let data = try? Data(contentsOf: url)
+//            if let imageData = data {
+//                let image = UIImage(data: data!)!
+//                
+//                itemImages.append(image)
+//            }
+//            
+//        }
+//    }
 
 
     override func viewWillLayoutSubviews() {
@@ -109,7 +96,7 @@ class bucketVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return myBuckets.count
+        return images.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -129,10 +116,7 @@ class bucketVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     
     
     
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        let customCell = cell as! customCell
-        customCell.imageView.image = itemImages[indexPath.row]
-    }
+
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

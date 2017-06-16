@@ -32,7 +32,7 @@ class bucketListTableVC: UIViewController, UITableViewDataSource, UITableViewDel
         tableView.delegate = self
 
         loadProposals()
-        fuckingChrist()
+//        fuckingChrist()
         // Do any additional setup after loading the view.
     }
     
@@ -43,6 +43,43 @@ class bucketListTableVC: UIViewController, UITableViewDataSource, UITableViewDel
         
         
             //        var proposals: [Proposal] = []
+        
+      
+            Alamofire.request("http://localhost:3000/users/1/buckets", method: .get, headers: nil)
+                .validate(statusCode: 200..<300)
+                .responseJSON { response in
+                    //                    print(response.result.value)
+                    myProposals.removeAll()
+                    
+                    if let JSON = response.result.value! as? [[String:Any]] {
+                        
+                        //                        print("COUNT")
+                        //                        print(JSON.count)
+                        
+                        print(JSON)
+                        
+                        
+                        for a in JSON {
+                            
+                            print("A")
+                            
+                                                       
+                            
+                            let buck = Bucket(item: a["item"] as! String, price: a["price"] as! Double, imageString: a["imageString"] as! String, months: a["months"] as! Int, monthly: a["monthly"] as! Double)
+                            
+                            
+                            
+                            myBuckets.append(buck)
+                        }
+                        print("BUCKETS!")
+                        print(myBuckets)
+                        print("ITEM IMAGES COUNT")
+                    
+                        
+                    }
+            }        // code
+            
+    
             
             
             Alamofire.request("http://localhost:3000/users/1/proposals", method: .get, headers: nil)

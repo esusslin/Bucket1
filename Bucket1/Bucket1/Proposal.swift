@@ -13,6 +13,8 @@ enum SerializationError: Error {
     case missing(String)
 }
 
+
+
 var myBuckets = [Bucket]()
 var myProposals = [Proposal]()
 //Double(round(1000*x)/1000)
