@@ -7,20 +7,37 @@
 //
 
 import UIKit
+import Alamofire
 
 class bucketVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var images = ["bucket_1", "bucket_2", "bucket_3", "bucket_4", "bucket_5", "bucket_6", "bucket_1", "bucket_2", "bucket_3", "bucket_4", "bucket_5", "bucket_6", "bucket_1", "bucket_2", "bucket_3", "bucket_4", "bucket_5", "bucket_6"]
+   var images = ["noun1", "noun2", "noun3"]
     
+ 
+    var itemImages = [UIImage]()
     var fullImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        for a in myBuckets {
+        let url = URL(string: a.imageString)!
+        let data = try? Data(contentsOf: url)
+        if let imageData = data {
+            let image = UIImage(data: data!)!
+            
+            itemImages.append(image)
+            }
+            print("Images filled")
+            print(itemImages)
+            print(itemImages.count)
+        }
+
         
-        collectionView.delegate = self
-        collectionView.dataSource = self
+     
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
         
         
         fullImageView = UIImageView()
@@ -34,8 +51,37 @@ class bucketVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         fullImageView.addGestureRecognizer(dismissWihtTap)
 
 
-        // Do any additional setup after loading the view.
+        
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        myBuckets.removeAll()
+        
+//        loadImages()
+        
+        print("ITEM IMAGES COUNT")
+       print(itemImages.count)
+    }
+    
+
+    
+//    func loadImages() {
+//        
+//        for buck in myBuckets {
+//            
+//            
+//            
+//            let url = URL(string: buck.imageString)!
+//            let data = try? Data(contentsOf: url)
+//            if let imageData = data {
+//                let image = UIImage(data: data!)!
+//                
+//                itemImages.append(image)
+//            }
+//            
+//        }
+//    }
+
 
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
@@ -55,18 +101,22 @@ class bucketVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCell", for: indexPath) as! customCell
         
         cell.layer.cornerRadius = 12
         cell.layer.borderWidth = 1.5
         cell.layer.borderColor = UIColor.white.cgColor
         
-        
-        
-        cell.imageView.image = UIImage(named: images[indexPath.row])
+
+        cell.imageView.image = itemImages[indexPath.row]
         
         return cell
     }
+    
+    
+    
+
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

@@ -20,6 +20,8 @@ class bucketListTableCell: UITableViewCell {
     @IBOutlet weak var price: UILabel!
     
 
+    @IBOutlet weak var itemImage: UIImageView!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -43,9 +45,18 @@ class bucketListTableCell: UITableViewCell {
         
         self.duration.text = String(proposal.months) + " mos"
         
-        self.monthly_payments.text = "$ " + String(proposal.monthly_payments)
+        self.monthly_payments.text = "$ " + String(proposal.monthly)
         
-        
+        let url = URL(string: proposal.imageString)!
+        let data = try? Data(contentsOf: url)
+        if let imageData = data {
+            let image = UIImage(data: data!)
+            
+            itemImage.image = image
+            //            imageView.layer.cornerRadius = 8
+            itemImage.layer.shadowOpacity = 0.8
+        }
+
     }
 
 

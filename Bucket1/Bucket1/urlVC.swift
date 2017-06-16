@@ -18,7 +18,7 @@ class urlVC: UIViewController {
 
     @IBOutlet weak var submitBtn: UIButton!
     override func viewDidLoad() {
-        super.viewDidLoad()
+    super.viewDidLoad()
 
         urlTextField.text = ""
         
@@ -48,16 +48,58 @@ class urlVC: UIViewController {
 
     }
     
+//    let parameters: Parameters = ["bucket": ["item": "boner", "price": "boner", "monthly": "boner", "months": "boner"]
+//    ]
+//    
+//    Alamofire.request("https://localhost:3000/proposals/hello", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+//    .validate(statusCode: 200..<300)
+//    .responseJSON() { response in
+//    print(response)
+//    }
+    
     
     func postSemantics(url: String) {
+
         
         let parameters: Parameters = ["url": url, "user_id": user_id]
         
         Alamofire.request("http://localhost:3000/proposals/url", method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .validate(statusCode: 200..<300)
             .responseJSON() { response in
-                print(response)
+//                print(response)
+                
+                 if let JSON = response.result.value as? [String:Any] {
+                    print(JSON)
+                    
+                    let proposal1 = Proposal(item: JSON["item"] as! String, price: JSON["price"] as! Double, imageString: JSON["imageString"] as! String)
+//                    let proposal2 = Proposal(item: JSON["item"] as! String, price: JSON["price"] as! Double, imageString: JSON["imageString"] as! String)
+//                    let proposal3 = Proposal(item: JSON["item"] as! String, price: JSON["price"] as! Double, imageString: JSON["imageString"] as! String)
+                    
+                    print(proposal1)
+                    myProposals.append(proposal1)
+                
+
+
+                    let alert = UIAlertController(title: "New Proposal: \(proposal1.item) ..!", message: "Pay for this item in 8 months at \(proposal1.monthly)", preferredStyle: .alert)
+                    
+                    let cancelAction = UIAlertAction(title: "OK", style: .cancel) { (action) in
+                        
+                        print("BONER!")
+                       
+                    }
+                    alert.addAction(cancelAction)
+                    
+                    
+                    let height:NSLayoutConstraint = NSLayoutConstraint(item: alert.view, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: self.view.frame.height * 0.80)
+                    alert.view.addConstraint(height);
+                    self.present(alert, animated: true, completion: nil)
+                
+//                    let proposal.imageString = JSON["imageString"] as! String
+                    
+                }
+                
         }        // code
+
     }
 
     
@@ -65,10 +107,10 @@ class urlVC: UIViewController {
 
 
     
-    
-
-   
 }
+
+
+
 
 
 
